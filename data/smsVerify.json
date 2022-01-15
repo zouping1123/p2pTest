@@ -1,0 +1,36 @@
+{
+  "test_get_sms_verify_code": [
+    {
+      "desc":"获取注册短信验证码成功",
+      "phone":"13033447711",
+      "img_code": 8888,
+      "status_code": 200,
+      "status": 200,
+      "description": "短信发送成功"
+    },
+    {
+      "desc":"图片验证码错误,获取注册短信验证码失败",
+      "phone":"13033447711",
+      "img_code": 1234,
+      "status_code": 200,
+      "status": 100,
+      "description": "图片验证码错误"
+    },
+    {
+      "desc":"图片验证码为空,获取注册短信验证码失败",
+      "phone":"13033447711",
+      "img_code": "",
+      "status_code": 200,
+      "status": 100,
+      "description": "图片验证码错误"
+    },
+    {
+      "desc":"手机号为空,获取注册短信验证码失败",
+      "phone":"",
+      "img_code": 8888,
+      "status_code": 200,
+      "status": 100,
+      "description": "手机号不能为空"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "test_login": [
+    {
+      "desc": "登录成功",
+      "phone": "13033447711",
+      "pwd": "test123" ,
+      "status_code": 200,
+      "status": 200,
+      "description": "登录成功"
+    },
+    {
+      "desc": "用户名不存在，登录失败",
+      "phone": "130000000001",
+      "pwd": "test123" ,
+      "status_code": 200,
+      "status": 100,
+      "description": "用户不存在"
+    },
+    {
+      "desc": "密码为空，登录失败",
+      "phone": "13033447711",
+      "pwd": "" ,
+      "status_code": 200,
+      "status": 100,
+      "description": "密码不能为空"
+    }
+  ]
+}
