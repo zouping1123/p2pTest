@@ -1,0 +1,489 @@
+2022-01-14 20:15:06,336 INFO [root] [tender.py(test1_getTenderInfo:24)] - get_tender response={'status': 200, 'data': {'attachment_ids': '', 'loan_info': {'tender_count': '7', 'add_date': '2022-01-14', 'tender_amount_min': 100.0, 'wait_amount': '3000.00', 'use': '买房', 'period_name': '1个月', 'award_status': -1, 'additional_amount_max': 0.0, 'serialno': '202201140003', 'isCert': '2', 'overdue_time': '2022-02-13 16:04:09', 'password_status': False, 'category_id': '1', 'additional_name': 'null+0.00%', 'id': '746', 'catePic': 'http://imgv-p2p-test.itheima.net/loan/borrowtype/20191008/f5249edf-ec06-40c9-b56d-d0bd65cc4f89.png', 'validate': 30, 'member_id': '2161', 'period': '1', 'apr': '5.00', 'amount': '10000.00', 'status_name': '借款中', 'category_type': '1', 'deposit_certificate': '-1', 'additional_status': -1, 'member_name': '13388888888', 'vouch_company_id': '0', 'is_auto': 1, 'hits': 19, 'contents': 'maif', 'credited_amount': '7000.00', 'name': '借钱', 'progress': '70.00', 'tender_amount_max': 1000.0, 'repay_type': '1', 'hidden_status': '1', 'is_company': -1, 'additional_apr': 0.0, 'tenderNum': '7', 'status': '3'}, 'member_approve': {'is_email': 'no', 'is_phone': 'yes', 'is_realname': 'yes', 'is_lock': 'yes', 'username': '13388888888'}, 'company_info': {}, 'member_info': {'member_id': 2161, 'birthday': '1957-10-10', 'industry_name': '未填', 'gender': '男', 'company_scale_name': '未填', 'member_name': '13388888888', 'marry_name': '未填', 'card_id': '372522195710100019', 'realname': '若**', 'edu_name': '未填', 'graduated': '未填', 'imgPath': 'http://imgv-p2p-test.itheima.net', 'monthly_income_name': '未填', 'id': 2273, 'company_office_name': '未填'}, 'member_loan_info': {'late_amount': 0, 'late_repay': 0, 'late_repay_max': 0, 'loan_success_amount': 0, 'interestTotal': 10041.67, 'loan_count': 1, 'repay_success_count': 0, 'loan_success_count': 0, 'wait_repay_total': 0}, 'comList': [], 'iscompany': '-1', 'attaList': [], 'companyPic': '', 'member': {'self_loan': -1, 'can_tender_new': 1, 'is_login': -1}, 'repay_type': {'contents': '月还款本息=贷款本金×月利率×（1 月利率）还款月数/[（1 月利率）还款月数-1]', 'name': '等额本息', 'remark': '', 'id': 1}}, 'description': 'OK'}
+2022-01-14 20:17:15,690 INFO [root] [tender.py(test2_tender:33)] - tender response = 
+
+
+<!DOCTYPE html>
+<html id="ng-app">
+	<head>
+		<base href="http://user-p2p-test.itheima.net:80/">
+
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	    <meta http-equiv="pragma" content="no-cache" />
+	    <meta http-equiv="cache-control" content="no-cache" />
+	    <meta http-equiv="expires" content="0" />
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <meta name="keywords" content="第三方托管"/>
+		<meta name="description" content="传智播客" />
+
+		<title>传智播客</title>
+
+	    <link href="assets/trust/style/css/dist/iconfont.css" type="text/css" rel="stylesheet" />
+	    <link href="assets/trust/style/css/dist/style.css" type="text/css" rel="stylesheet" />
+	    <link href="assets/trust/style/css/dist/extend.css" type="text/css" rel="stylesheet" />
+	 	<link href="http://imgv-p2p-test.itheima.net/system/config/20191217/c340f991-8b08-4f00-9e83-fc7aed2e3c66.png" rel="shortcut icon" type="image/x-icon" />
+	 	<script src="assets/trust/js/src/diyou.js"></script>
+	  	<script src="assets/trust/js/src/jquery-1.8.2.min.js"></script>
+	    <script src="assets/trust/js/src/json2.js"></script>
+	    <script src="assets/trust/js/src/angular.min.js"></script>
+	    <script src="assets/trust/js/src/angular-ngSea.js"></script>
+	    <script src="assets/trust/js/src/angular-paging.js"></script>
+	     <script>
+	    	var THEME_URL = "assets/trust";
+	        var	layerUrl = THEME_URL + "/js/src/plugins/layer/";
+	    </script>
+	    <script src="assets/trust/js/src/base.js"></script>
+	</head>
+
+	<body ng-cloak class="ng-cloak" style="background: #f5f5f5;">
+	    <div  style="width: 100%;" ng-controller="msgNumCtrl">
+	    	<div class="header">
+	    		
+
+
+<div class="header fn-clear">
+    <div class="header-top">
+        <div class="conbox fn-clear">
+            <div class="fl">
+                <span class="newIconfont">&#xe621;</span>
+                <span class="tel">400-810-6116</span>
+            </div>
+            <div class="sub-nav fr">
+   
+   
+              
+                <li class="regFinish"><a href="common/member/login" class="login">登录</a></li>
+                <li class="regFinish"><a href="common/member/reg" class="reg">有奖注册</a></li>
+         
+                              
+             
+               	<li class="last regFinish2" style="display:none;">
+                	<span class="user">你好，<a class="a-link1" href="member/member/center"></a></span>
+                		站内信(<a class="msg" href="member/message/index" >{{msgNum}}</a>)
+                    <a class="logout" href="member/member/logout">退出</a>
+                </li>
+                
+                
+                <li><a href="common/member/reg" class="help-center">帮助中心</a></li>
+                
+            </div>
+        </div>
+    </div>
+    <div class="header-cont">
+        <div class="conbox fn-clear">
+            <!-- <a class="logo" href="/"><img src="assets/trust/images/index/logo.png" alt="智客在线"></a> -->
+            
+				
+					<a class="logo" href="/"><img src="http://imgv-p2p-test.itheima.net/system/config/20191217/6f888441-c505-4a7c-85d2-ab2a29f49805.png" alt="传智播客" /></a>
+				
+				
+			
+            
+            
+            <div class="fr" style="font-size: 14px;line-height: 30px;margin-top:50px;color:#999;">
+
+		        <div class="enter-box fr regFinish" ng-if="system.title=='用户注册'">
+		            已有账号？<a class="a-link1" href="/common/member/login" style="color:#317ef3;font-style: underline;">立即登录</a>
+		        </div>
+	         
+	         
+	        
+	        	<div class="enter-box fr regFinish2" style="display:none;"><a class="a-link f-s14" href="/member/member/center" style="color:#317ef3;">返回用户中心&nbsp;<i class="iconfont">&#xe63f;</i></a></div>
+	        
+           </div>
+        </div>
+    </div>
+</div>
+<script>
+var login_error = "";
+
+//var isLogin = $.cookie('isLogin');
+$(function(){
+	var isLogin = sessionStorage.getItem('isLogin');
+	var phone = sessionStorage.getItem('phone');
+	console.log("isLogin"+ isLogin);
+	console.log("phone"+ phone);
+	if(isLogin != 1){                        		 	
+		$(".regFinish").show();
+	}else{
+		$(".regFinish2").show();
+		$(".regFinish").hide();	
+		$(".a-link1").text(phone);
+		sessionStorage.clear();
+// 		$(".msg").text(0);                        			
+   }
+});
+
+</script>
+<script>
+
+diyou.use('indexEffect', function (fn) {
+    fn.viewWeixin();
+});
+</script>
+
+
+	    	</div>
+	    	
+<!-- <input type="hidden" ng-model="system.title" ng-init="system.title='用户登录'"> -->
+<div  style="width: 100%;">
+<div class="login-bg" ng-controller="loginCtrl">
+	<div class="conbox">
+		<div class="enter-login fn-clear" style="background: none;">
+			<div class="login-box bor-e2 fr">
+				<div class="login-form">
+					<div class="login-tit">用户登录</div>
+					<form name="formLogin" id="login_form" role="form" ng-submit="submit();" novalidate>
+						<div class="login-cont">
+							<div id="err" class="login-error" ng-if="loginErr">
+								<i class="iconfont">&#xe601;</i><span ng-bind="loginErr"></span>
+							</div>
+							<div class="login-item fn-clear">
+								<label for="" class="login-label"><em class="newIconfont">&#xe640;</em></label>
+								<input class="login-input" type="text" id="keywords" name="keywords" placeholder="用户名/邮箱/手机号" autocomplete="off" ng-model="login.keywords" my-placeholder required autofocus/>
+							</div>
+							<div class="login-item fn-clear">
+								<label for="" class="login-label"><em class="newIconfont">&#xe6bb;</em></label>
+                        		<input class="ng-hide">
+								<input class="login-input" type="password" id="password" name="password"  placeholder="登录密码" autocomplete="off" ng-model="login.password" my-placeholder required/>
+							</div>
+							<div class="login-item fn-clear" ng-if="verifycode_show">
+								<label for="" class="login-label"><i class="code"></i></label>
+								<input class="login-input mr10 w100" maxlength="4" type="text" id="verifycode" name="verifycode" placeholder="验证码" autocomplete="off" ng-model="login.verifycode" ng-change="checkcode(login.verifycode);" my-placeholder required/>
+								<span class="checkcode" ng-if="code">
+									<em class="iconfont info-error" ng-if="!infoerror">&#xe601;</em>
+									<em class="iconfont info-right" ng-if="infoerror">&#xe602;</em>
+								</span>
+								<img class="code" src="common/public/verifycode/1" onclick="this.src='common/public/verifycode/'+Math.random();"/>
+							</div>
+							<div class="login-item fn-clear">
+								<input class="login-btn" type="submit" value="立即登录">
+							</div>
+							<div class="forget">
+								<p><span><a href="/member/public/getPwd" target="_blank" title="忘记密码？"><img src="/assets/trust/style/css/dist/images/loginlock.png"></a></span><a class="new-reg" href="/common/member/reg"><em>没有账号？马上注册</a></p>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<script type="text/javascript">
+diyou.use('users_login',function(dy){dy.login('log_form');});
+$(".login-input").focus(function(){
+	$(this).siblings('.login-label').find('.newIconfont').css("color","#317ef3");
+});
+$(".login-input").blur(function(){
+	$(this).siblings('.login-label').find('.newIconfont').css("color","initial");
+});
+</script>
+
+	    	<div id="mlayout_footer"></div>
+	    </div>
+	 	<div  style="width: 100%;">
+	 		
+
+
+<!-- footer start -->
+<link rel="stylesheet" href="assets/trust/style/css/dist/index.css">
+<div ng-controller="newfooterCtrl">
+<div class="footer">
+    <div class="footer-top">
+        <div class="conbox">
+            <ul class="fn-clear">
+                <li>
+                    <img src="assets/trust/images/index/feat1.png" alt="">
+                    <h2>优质项目</h2>
+                    <p>小额分散更安全安心</p>
+                </li>
+                <li>
+                    <img src="assets/trust/images/index/feat2.png" alt="">
+                    <h2>领先企业</h2>
+                    <p>消费金融二十强企业 </p>
+                </li>
+                <li>
+                    <img src="assets/trust/images/index/feat3.png" alt="">
+                    <h2>国资控股</h2>
+                    <p>首都城投战略投资 </p>
+                </li>
+                <li>
+                    <img src="assets/trust/images/index/feat4.png" alt="">
+                    <h2>消费金融</h2>
+                    <p>专注年轻人的消费金融 </p>
+                </li>
+                <li>
+                    <img src="assets/trust/images/index/feat5.png" alt="">
+                    <h2>严格风控</h2>
+                    <p>大数据风控</p>
+                </li>
+                <li>
+                    <img src="assets/trust/images/index/feat6.png" alt="">
+                    <h2>合规经营</h2>
+                    <p>合法合规稳健规范</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-btm">
+        <div class="conbox fn-clear">
+            <div class="fl left">
+                <h2>400-810-6116</h2>
+                <p>服务时间：早8:00至晚22:00</p>
+                <div class="contact-icon">
+                </div>
+            </div>
+            <div class="fl center fn-clear">
+                <ul>
+                    <li>
+                        <i class="newIconfont">&#xe626;</i>
+                        <span>关于智客</span>
+                    </li>
+                    <li><a href="http://user-p2p-test.itheima.net/content/articles/getDetail?id=1" target="_blank">智客介绍</a></li>
+                    <li><a href="http://user-p2p-test.itheima.net/content/articles/getDetail?id=1" target="_blank">创始团队</a></li>
+                    <li><a href="http://user-p2p-test.itheima.net/content/articles/getDetail?id=1" target="_blank">专家顾问</a></li>
+                    <li><a href="http://user-p2p-test.itheima.net/content/articles/getDetail?id=1" target="_blank">联系我们</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <i class="newIconfont">&#xe601;</i>
+                        <span>安全保障</span>
+                    </li>
+                    <li><a href="http://user-p2p-test.itheima.net/content/articles/getDetail?id=1" target="_blank">用户协议</a></li>
+                    <li><a href="http://user-p2p-test.itheima.net/content/articles/getDetail?id=1" target="_blank">隐私条款</a></li>
+                    <li><a href="http://user-p2p-test.itheima.net/content/articles/getDetail?id=1" target="_blank">合作伙伴</a></li>
+                    <li><a href="http://user-p2p-test.itheima.net/content/articles/getDetail?id=1">安全保障</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <i class="newIconfont">&#xe607;</i>
+                        <span>帮助中心</span>
+                    </li>
+                    <li><a href="http://user-p2p-test.itheima.net/content/articles/getDetail?id=1" target="_blank">支付说明</a></li>
+                    <li><a href="http://user-p2p-test.itheima.net/content/articles/getDetail?id=1" target="_blank">收费标准</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <i class="newIconfont">&#xe62f;</i>
+                        <span>荣誉资质</span>
+                    </li>
+                    <li><a href="http://user-p2p-test.itheima.net/content/articles/getDetail?id=1" target="_blank">招贤纳士</a></li>
+                </ul>
+            </div>
+            <div class="fl right">
+            </div>
+        </div>
+        <div class="conbox">
+            <p class="copyright"></p>
+            <p class="copyright"><a href="http://www.miitbeian.gov.cn" target="_blank"></a></p>
+        </div>
+    </div>
+</div>
+<div class="footer-links">
+    <div class="conbox fn-clear">
+        <div class="verification">
+            <a href="javascript:;">
+                <img src="assets/trust/images/index/veri1.png" height="36" alt="">
+            </a>
+            <a href="javascript:;">
+                <img src="assets/trust/images/index/veri2.png" height="36" alt="">
+            </a>
+            <a href="javascript:;">
+                <img src="assets/trust/images/index/veri3.png" height="36" alt="">
+            </a>
+            <a href="javascript:;">
+                <img src="assets/trust/images/index/veri4.png" height="36" alt="">
+            </a>
+            <a href="javascript:;">
+                <img src="assets/trust/images/index/veri5.png" height="36" alt="">
+            </a>
+            <a href="javascript:;">
+                <img src="assets/trust/images/index/veri6.png" height="36" alt="">
+            </a>
+            <a href="javascript:;">
+                <img src="assets/trust/images/index/veri7.png" height="36" alt="">
+            </a>
+            <a href="javascript:;">
+                <img src="assets/trust/images/index/veri8.png" height="36" alt="">
+            </a>
+            <a href="javascript:;">
+                <img src="assets/trust/images/index/veri9.png" height="36" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+
+</div>
+<!-- footer end -->
+
+<!-- 右侧联系我们 -->
+
+
+<link rel="stylesheet" href="assets/trust/style/css/dist/index.css">
+<div class="side-menu" id="offside">
+    <ul>
+        <li class="offside offside-question">
+            <a class="helps" href="/help" target="_blank">
+                <div class="icon-w">
+                    <i class="newIconfont">&#xe645;</i>
+                    <div class="hide-text">帮助中心</div>
+                </div>
+            </a>
+        </li>
+        <li class="offside offside-contact">
+            <div class="icon-w">
+                <i class="newIconfont">&#xe63f;</i>
+                <div class="hide-text">在线客服</div>
+            </div>
+            <div class="popup-box">
+                <div>
+                    <h4><i class="newIconfont">&#xe635;</i>在线QQ客服</h4>
+                    <ul>
+                        <li>官方QQ群1：<i>534932601</i></li>
+                        <li>官方VIP群1：<i>128041585</i></li>
+                    </ul>
+                </div>
+                <p class="triangle"></p>
+            </div>
+        </li>
+        <li class="offside offside-calculator">
+            <div class="icon-w">
+                <i class="newIconfont">&#xe69d;</i>
+                <div class="hide-text">收益计算</div>
+            </div>
+            <div class="popup-box">
+                <div>
+                    <h4>计算器</h4>
+                    <form id="right-tool-form" method="post" novalidate="novalidate" class="ng-pristine ng-valid">
+                        <dl>
+                            <dd>
+                                <div class="ui-label">借款金额</div>
+                                <div class="ui-input">
+                                    <input type="text" name="account">
+                                    <em>元</em>
+                                </div>
+                            </dd>
+                            <dd>
+                                <div class="ui-label">年利率</div>
+                                <div class="ui-input">
+                                    <input type="text" name="lilv">
+                                    <em>%</em>
+                                </div>
+                            </dd>
+                            <dd>
+                                <div class="ui-label">借款期限</div>
+                                <div class="ui-input">
+                                    <input type="text" name="times">
+                                    <em>月</em>
+                                </div>
+                            </dd>
+                            <dd>
+                                <div class="ui-label">还款方式</div>
+                                <div class="ui-select">
+                                    <input type="hidden" name="type" value="month">
+                                    <div class="select-value"><span>等额本息</span><em></em>
+                                    </div>
+                                    <div class="select-list">
+                                        <ul id="borrow-style-select">
+                                            <li data-val="month">等额本息</li>
+                                            <!--  <li data-val="season">按季还款</li>  -->
+                                            <li data-val="end">到期还本还息</li>
+                                            <li data-val="endmonth">按月付息</li>
+                                            <!-- <li data-val="endmonths">按月付息到期还本</li>  -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </dd>
+                            <dd>
+                                <div class="ui-label">&nbsp;</div>
+                                <input class="ui-sub" type="submit" value="开始计算">
+                            </dd>
+                        </dl>
+                    </form>
+
+                    <div class="result-box" id="compileRightResult">
+                        <h4>计算结果</h4>
+                        <ul>
+                            <li>
+                                <label class="ui-label">每个月将偿还：</label>
+                                <span class="ui-input">
+                                    <em class="monthAcc">0.00</em> 元
+                                </span>
+                            </li>
+                            <li>
+                                <label class="ui-label">月利率：</label>
+                                <span class="ui-input">
+                                    <i class="monthAp">0.00</i> %
+                                </span>
+                            </li>
+                            <li>
+                                <label class="ui-label">还款本息总额：</label>
+                                <span class="ui-input">
+                                    <i class="monthIn">0.00</i> 元
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="triangle triangle1" style="top: -200px;"></p>
+            </div>
+        </li>
+        <li class="offside return-top">
+            <div class="icon-w">
+                <i class="newIconfont">&#xe7d2;</i>
+                <div class="hide-text">返回顶部</div>
+            </div>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+	diyou.use('offside', function(dy) {
+	    dy.offside('.return-top');
+	});
+	diyou.use('tool', function(d) {
+	    d.tool('right-tool-form','compileRightResult');
+	});
+</script>
+
+<!— WPA Button Begin —>
+<!-- <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODA3Njk0NF8zNTcxNTRfNDAwNjExODAwMF8"></script> -->
+<!— WPA Button END —>
+
+
+<!-- 结束 -->
+<script type="text/javascript">
+diyou.use('footer', function(f) {
+    f.aboutus();
+})
+diyou.on('error', function(module) {
+    if (module.status != 5) {
+        console.error('diyou error: ', module);
+    }
+});
+//Step2: bootstrap youself
+diyou.use(['app'], function(app) {
+    angular.bootstrap(document, ['app']);
+});
+diyou.use('indexEffect', function (fn) {
+    fn.closePop();
+});
+</script>
+<div style="display:none;">
+    <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1253656941'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1253656941' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+<script>
+diyou.use('indexEffect', function (fn) {
+    fn.hoverImg();
+    fn.hoverBotImg();
+    fn.clickMore();
+});
+</script>
+
+		</div>
+	</body>
+</html>
+
